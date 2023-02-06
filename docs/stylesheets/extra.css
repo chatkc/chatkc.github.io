@@ -1,7 +1,7 @@
 :root, [data-md-color-scheme="default"] {
   --md-default-bg-color: #000;
   --md-default-fg-color: #fff;
-  --md-default-fg-color--light: #6060e2;
+  --md-default-fg-color--light: #a4a4ed;
   --md-default-fg-color--lighter: #000;
   --md-default-fg-color--lightest: #000;
 
@@ -14,14 +14,14 @@
   --md-primary-fg-color: #000;
   --md-primary-fg-color--light: #fff;
   --md-primary-fg-color--dark: #000;
-  --md-primary-bg-color: #6060e2;
+  --md-primary-bg-color: #a4a4ed;
   --md-primary-bg-color--light: #fff;
 
 
-  --md-accent-fg-color: #2626ea;
+  --md-accent-fg-color: #6060e2;
   --md-accent-fg-color--transparent: #333333;
-  --md-accent-bg-color: #2626ea;
-  --md-accent-bg-color--light: #6060e2;
+  --md-accent-bg-color: #6060e2;
+  --md-accent-bg-color--light: #a4a4ed;
 
 
   --md-code-fg-color: #0f0;
@@ -30,7 +30,7 @@
 
   --md-typeset-color: #BFBFBF;
 
-  --md-typeset-a-color: #2626ea;
+  --md-typeset-a-color: #6060e2;
 
   --md-typeset-kbd-color: #f00;
   --md-typeset-kbd-accent-color: #0f0;
@@ -56,7 +56,7 @@
 /* Color of links before hover
 */
 .md-typeset a {
-  --md-typeset-a-color: #6060e2;
+  --md-typeset-a-color: #a4a4ed;
 }
 
 /* Thing behind selected tab
