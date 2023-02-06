@@ -12,6 +12,17 @@ nav:
 theme:
   logo: images/chatkc.png
   favicon: images/chatkclowres.png
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.expand
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - navigation.indexes
+
   font:
     text: Inconsolata
   name: material
