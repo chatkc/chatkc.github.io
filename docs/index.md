@@ -1,17 +1,34 @@
-# Welcome to MkDocs
+---
+hide:
+  - footer
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<style>
+  .rotate {
+  animation: rotation 8s infinite linear;
+}
 
-## Commands
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+</style>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<style>
+big {
+  font-size: 32px;
+}
+</style>
+<big>
+<p align="center">ChatKC Docs.</p>
+</big>
+<p align="center">
+  <img src="/images/chatkc.png" onload="imgresize(this); height="500" width="500" class="rotate"/>
+</p>
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
