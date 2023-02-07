@@ -24,7 +24,7 @@ big {
 }
 </style>
 <big>
-<p align="center">ChatKC Docs.</p>
+<p align="center">The ChatKC Docs</p>
 </big>
 <p align="center">
   <img src="/images/chatkccircle.png" onload="imgresize(this); height="500" width="500" class="rotate"/>
