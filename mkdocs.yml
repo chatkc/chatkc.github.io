@@ -10,8 +10,8 @@ nav:
     - Protocol: protocol/protocol.md
 
 theme:
-  logo: images/chatkc.png
-  favicon: images/chatkclowres.png
+  logo: images/chatkccircle.png
+  favicon: images/chatkcsquarelowres.png
   features:
     - navigation.instant
     - navigation.tabs

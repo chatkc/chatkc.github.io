@@ -27,7 +27,7 @@ big {
 <p align="center">ChatKC Docs.</p>
 </big>
 <p align="center">
-  <img src="/images/chatkc.png" onload="imgresize(this); height="500" width="500" class="rotate"/>
+  <img src="/images/chatkccircle.png" onload="imgresize(this); height="500" width="500" class="rotate"/>
 </p>
 
 
