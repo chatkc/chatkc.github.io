@@ -1,0 +1,1474 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ChatKC Docs">
+      
+      
+      
+        <link rel="canonical" href="https://chatkc.github.io/protocol/protocol/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      <link rel="icon" href="../../images/chatkcsquarelowres.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>Protocol - ChatKC Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inconsolata";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-1XP6QJ5VKZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-1XP6QJ5VKZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-1XP6QJ5VKZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-chatkc-protocol" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ChatKC Docs" class="md-header__button md-logo" aria-label="ChatKC Docs" data-md-component="logo">
+      
+  <img src="../../images/chatkccircle.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChatKC Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/chatkc/chatkc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ChatKC Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Protocol
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ChatKC Docs" class="md-nav__button md-logo" aria-label="ChatKC Docs" data-md-component="logo">
+      
+  <img src="../../images/chatkccircle.png" alt="logo">
+
+    </a>
+    ChatKC Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/chatkc/chatkc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ChatKC Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Protocol
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    Connectivity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-format" class="md-nav__link">
+    Event Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-types" class="md-nav__link">
+    Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientbound-event-types" class="md-nav__link">
+    Clientbound Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Clientbound Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepted" class="md-nav__link">
+    accepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authlevel" class="md-nav__link">
+    authlevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat" class="md-nav__link">
+    chat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getuserconf" class="md-nav__link">
+    getuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part" class="md-nav__link">
+    part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servermsg" class="md-nav__link">
+    servermsg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverbound-event-types" class="md-nav__link">
+    Serverbound Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Serverbound Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getuserconf_1" class="md-nav__link">
+    getuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hello" class="md-nav__link">
+    hello
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message" class="md-nav__link">
+    message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paypal" class="md-nav__link">
+    paypal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuserconf" class="md-nav__link">
+    setuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban" class="md-nav__link">
+    ban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipban" class="md-nav__link">
+    ipban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    timer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unban" class="md-nav__link">
+    unban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unmod" class="md-nav__link">
+    unmod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-formatting" class="md-nav__link">
+    Message Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    Emoji
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentions" class="md-nav__link">
+    Mentions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    URLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-levels" class="md-nav__link">
+    Authentication Levels
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    Connectivity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-format" class="md-nav__link">
+    Event Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-types" class="md-nav__link">
+    Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clientbound-event-types" class="md-nav__link">
+    Clientbound Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Clientbound Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepted" class="md-nav__link">
+    accepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authlevel" class="md-nav__link">
+    authlevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat" class="md-nav__link">
+    chat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getuserconf" class="md-nav__link">
+    getuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part" class="md-nav__link">
+    part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servermsg" class="md-nav__link">
+    servermsg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverbound-event-types" class="md-nav__link">
+    Serverbound Event Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Serverbound Event Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getuserconf_1" class="md-nav__link">
+    getuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hello" class="md-nav__link">
+    hello
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message" class="md-nav__link">
+    message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paypal" class="md-nav__link">
+    paypal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuserconf" class="md-nav__link">
+    setuserconf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban" class="md-nav__link">
+    ban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipban" class="md-nav__link">
+    ipban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    timer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unban" class="md-nav__link">
+    unban
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unmod" class="md-nav__link">
+    unmod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-formatting" class="md-nav__link">
+    Message Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    Emoji
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentions" class="md-nav__link">
+    Mentions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    URLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-levels" class="md-nav__link">
+    Authentication Levels
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="the-chatkc-protocol">The ChatKC Protocol</h1>
+<p>ChatKC is a protocol that originated from <a href="https://www.youtube.com/@MattKC">MattKC</a>'s website <a href="https://stream.mattkc.com/">here</a> and reverse engineered by <a href="https://github.com/cbpudding">Breadpudding</a> and <a href="https://github.com/zegfarce">janKonku</a> on January 16th, 2023. After playing around with the protocol for hours, MattKC found us hanging out and decided to tweak the protocol a bit to make things easier for us to work with. This document describes the protocol that was created as a result.</p>
+<p><img alt="Breadpudding: He's here but he's not active
+MattKC: lol hey i didn't know people would still be here
+Breadpudding: Oh heck
+Platapai: yooo
+MattKC: gonna work on some improvements
+Breadpudding: Improvements? This webchat is already perfect.
+Platapai: ^^^
+janKonku: it's particularly nice for alternate clients
+Breadpudding: That we may or may not be writing as we speak
+janKonku: very little in the way of coding needed to connect to it and have it working
+Breadpudding: Maybe reduce the rate limiting when you aren't streaming?" src="/images/protocol1.png" /></p>
+<p><img alt="MattKC: there is an argument for sending the time with the message, it could be nice even on here to be able to see exactly when a message was sent
+MattKC: it's obviously recorded in the database but isn't sent to the client
+Breadpudding: Wait, there's a database for this?
+Breadpudding: Your poor server lol
+janKonku: did you record the one test packet i sent
+MattKC: yes the chat is backed by a database
+janKonku: should be type 'test' :)" src="/images/protocol2.png" /></p>
+<h2 id="connectivity">Connectivity</h2>
+<p>In order to connect to a ChatKC server, you must establish a secure WebSocket connection to TCP port 2002 and send the "hello" event to the server. Once the server sends the initial burst of "message" events followed by "join" events, bidirectional communication can take place.</p>
+<h2 id="event-format">Event Format</h2>
+<p>All events sent to and received from the server are JSON objects containing the <code>type</code> and <code>data</code> attributes. The <code>type</code> attribute will always be a string that describes the information found in the <code>data</code> attribute.</p>
+<p>In addition to those two fields, events sent to the server are required to have the <code>auth</code> and <code>token</code> attributes. In the reference implementation of the server, <code>auth</code> is always set to the string "google" and <code>token</code> is set to your OAuth2 token.</p>
+<h2 id="event-types">Event Types</h2>
+<h3 id="clientbound-event-types">Clientbound Event Types</h3>
+<h4 id="accepted">accepted</h4>
+<p>This event means that the server has acknowledged the last message you sent. The <code>data</code> for this type is an object with the <code>message</code> attribute set to the content of your last message.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;accepted&quot;,
+    &quot;data&quot;: {
+        &quot;message&quot;: &quot;Hello world!&quot;
+    }
+}
+</code></pre>
+<h4 id="authlevel">authlevel</h4>
+<p>This event informs the client of their current authentication level. The <code>data</code> for this type is an object with the <code>value</code> attribute set to a number corresponding to your current authentication level.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;authlevel&quot;,
+    &quot;data&quot;: {
+        &quot;value&quot;: 0
+    }
+}
+</code></pre>
+<h4 id="chat">chat</h4>
+<p>This event informs the client of a new message. The <code>data</code> for this type is an object with the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auth</code></td>
+<td><code>number</code></td>
+<td><em>Unknown</em></td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td><code>string</code></td>
+<td>The name of the user who created the message</td>
+</tr>
+<tr>
+<td><code>author_color</code></td>
+<td><code>string</code></td>
+<td>The hexadecimal color code of the user's preferred name color</td>
+</tr>
+<tr>
+<td><code>author_id</code></td>
+<td><code>number</code></td>
+<td>The identifier of the message author</td>
+</tr>
+<tr>
+<td><code>author_level</code></td>
+<td><code>number</code></td>
+<td>The authentication level of the message author</td>
+</tr>
+<tr>
+<td><code>donate_value</code></td>
+<td><code>string</code></td>
+<td>The donation amount given in USD (or an empty string for no donation)</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>number</code></td>
+<td>The identifier of the message itself</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>The contents of the message</td>
+</tr>
+<tr>
+<td><code>reply</code></td>
+<td><code>number</code></td>
+<td>The identifier of the message being replied to (0 if none)</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td><code>number</code></td>
+<td>The timestamp of when the message was created in milliseconds since the Unix epoch</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;chat&quot;,
+    &quot;data&quot;: {
+        &quot;auth&quot;: 0,
+        &quot;author&quot;: &quot;Breadpudding&quot;,
+        &quot;author_color&quot;: &quot;B3DCF5&quot;,
+        &quot;author_id&quot;: 2268,
+        &quot;author_level&quot;: 0,
+        &quot;donate_value&quot;: &quot;2.00&quot;,
+        &quot;id&quot;: 15225,
+        &quot;message&quot;: &quot;Hello world!&quot;,
+        &quot;reply&quot;: 0,
+        &quot;time&quot;: 1674090083882
+    }
+}
+</code></pre>
+<h4 id="delete">delete</h4>
+<p>This event informs the client that the list of message identifiers given have been deleted from the server. The <code>data</code> for this type is an object with the <code>messages</code> attribute which is an array of message IDs.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;delete&quot;,
+    &quot;data&quot;: {
+        &quot;messages&quot;: [
+            15221,
+            15222,
+            15223,
+            15224,
+            15225
+        ]
+    }
+}
+</code></pre>
+<h4 id="getuserconf">getuserconf</h4>
+<p>This event informs the client of the user's current configuration. The <code>data</code> for this type is an object with the <code>color</code> and <code>name</code> attributes, where the <code>color</code> attribute is the user's name color in hexadecimal and the <code>name</code> attribute is the current username.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;getuserconf&quot;,
+    &quot;data&quot;: {
+        &quot;color&quot;: &quot;B3DCF5&quot;,
+        &quot;name&quot;: &quot;Breadpudding&quot;
+    }
+}
+</code></pre>
+<h4 id="join">join</h4>
+<p>This event informs the client that a member has joined the chat. The <code>data</code> for this type is an object with the <code>name</code> attribute set to the member's name.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;join&quot;,
+    &quot;data&quot;: {
+        &quot;name&quot;: &quot;Breadpudding&quot;
+    }
+}
+</code></pre>
+<h4 id="part">part</h4>
+<p>This event informs the client that a member has left the chat. The <code>data</code> for this type is an object with the <code>name</code> attribute set to the member's name.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;part&quot;,
+    &quot;data&quot;: {
+        &quot;name&quot;: &quot;Breadpudding&quot;
+    }
+}
+</code></pre>
+<h4 id="servermsg">servermsg</h4>
+<p>This event contains a message from the server to the client. This message is only visible to the client that received it and is typically used for error messages. The <code>data</code> for this type is an object with the <code>message</code> attribute.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;servermsg&quot;,
+    &quot;data&quot;: {
+        &quot;message&quot;: &quot;Available commands: commands, forum, forums, geoguessr, help, info, insta, instagram, time, timer, twitter, website, youtube, yt&quot;
+    }
+}
+</code></pre>
+<h4 id="status">status</h4>
+<p>This event informs the client of their current status. The <code>data</code> for this type is an object with the <code>status</code> attribute set to the current status.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;status&quot;,
+    &quot;data&quot;: {
+        &quot;status&quot;: &quot;authenticated&quot;
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>authenticated</code></td>
+</tr>
+<tr>
+<td><code>banned</code></td>
+</tr>
+<tr>
+<td><code>nameexists</code></td>
+</tr>
+<tr>
+<td><code>nameinvalid</code></td>
+</tr>
+<tr>
+<td><code>namelength</code></td>
+</tr>
+<tr>
+<td><code>nametimeout</code></td>
+</tr>
+<tr>
+<td><code>rename</code></td>
+</tr>
+<tr>
+<td><code>setuserconf</code></td>
+</tr>
+<tr>
+<td><code>unauthenticated</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="serverbound-event-types">Serverbound Event Types</h3>
+<h4 id="getuserconf_1">getuserconf</h4>
+<p>This event is used to ask the server for the client's current configuration. There is no <code>data</code> field for this event.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;getuserconf&quot;,
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h4 id="hello">hello</h4>
+<p>This event is used to introduce the client to the server. The <code>data</code> for this type is an object with the <code>last_message</code> attribute set to <code>-1</code>. Currently, we do not know why this data is sent.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;hello&quot;,
+    &quot;data&quot;: {
+        &quot;last_message&quot;: -1
+    },
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h4 id="message">message</h4>
+<p>This event is used to send a message to the server. The <code>data</code> for this type is an object with the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reply</code></td>
+<td><code>number</code></td>
+<td>The ID of the message that this message is a reply of (0 for none)</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><code>string</code></td>
+<td>The content of the message being sent</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;message&quot;,
+    &quot;data&quot;: {
+        &quot;text&quot;: &quot;Hello world!&quot;,
+        &quot;reply&quot;: 0
+    },
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h4 id="paypal">paypal</h4>
+<p>This event is used to donate money to the owner of the server.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;paypal&quot;,
+    &quot;data&quot;: {
+        // A lot of this isn't safe to put in documentation
+    },
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h4 id="setuserconf">setuserconf</h4>
+<p>This event is used to store the client's current configuration on the server. The <code>data</code> for this type is an object containing the <code>color</code> and <code>name</code> attributes.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;setuserconf&quot;,
+    &quot;data&quot;: {
+        &quot;name&quot;: &quot;Breadpudding&quot;,
+        &quot;color&quot;: &quot;B3DCF5&quot;
+    },
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h4 id="status_1">status</h4>
+<p>This event is used to request a status update from the server. The <code>data</code> for this type is an empty object.</p>
+<p>Example:</p>
+<pre><code class="language-JSON">{
+    &quot;type&quot;: &quot;status&quot;,
+    &quot;data&quot;: {},
+    &quot;auth&quot;: &quot;google&quot;,
+    &quot;token&quot;: &quot;...&quot;
+}
+</code></pre>
+<h2 id="commands">Commands</h2>
+<p>Commands are actions performed by users using messages prefixed with an exclamation point.</p>
+<h3 id="ban">ban</h3>
+<p>Usage: <code>!ban &lt;username&gt;</code></p>
+<p>Summary: Bans a user from the chat</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h3 id="help">help</h3>
+<p>Aliases: commands</p>
+<p>Usage: <code>!help</code></p>
+<p>Summary: Lists all of the commands that the user has access to</p>
+<p>Minimum Authentication Level: <code>0</code></p>
+<h3 id="info">info</h3>
+<p>Usage: <code>!info</code></p>
+<p>Summary: Displays information about the server</p>
+<p>Minimum Authentication Level: <code>0</code></p>
+<h3 id="ipban">ipban</h3>
+<p>Usage: <code>!ipban &lt;address&gt;</code></p>
+<p>Summary: Blocks a specific IP address from sending messages</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h3 id="mod">mod</h3>
+<p>Usage: <code>!mod &lt;username&gt;</code></p>
+<p>Summary: Promotes a user to a moderator</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h3 id="rm">rm</h3>
+<p>Usage: <code>!rm &lt;message id&gt;</code></p>
+<p>Summary: Deletes a message from the chat</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h3 id="time">time</h3>
+<p>Usage: <code>!time</code></p>
+<p>Summary: Displays the current time on the server</p>
+<p>Minimum Authentication Level: <code>0</code></p>
+<h3 id="timer">timer</h3>
+<p>Usage: <code>!timer &lt;start/check/stop&gt; &lt;name&gt;</code></p>
+<p>Summary: Creates, checks, or deletes a timer on the server</p>
+<p>Minimum Authentication Level: <code>0</code></p>
+<h3 id="unban">unban</h3>
+<p>Usage: <code>!unban &lt;username&gt;</code></p>
+<p>Summary: Reverts an existing ban on a user</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h3 id="unmod">unmod</h3>
+<p>Usage: <code>!unmod &lt;username&gt;</code></p>
+<p>Summary: Demotes a user to an unprivileged member</p>
+<p>Minimum Authentication Level: <em>Unknown</em></p>
+<h2 id="message-formatting">Message Formatting</h2>
+<p><em>TODO</em></p>
+<h3 id="emoji">Emoji</h3>
+<p>The emoji system is still very unknown, but it seems that they are pulled from an array or table.</p>
+<p>https://stream.mattkc.com/chat/emotes/</p>
+<!---
+![ Status | Method | Domain | File | Initiator | Type | Transfered | Size | 0ms
+200 | GET | (lock icon) stream.mattkc.com | /chat/emotes/ | jquery-3.6.1.min.js:2 (xhr) | html | 1.65 kB | 7.43kB | 231ms ](/images/protocolemoji.png)
+--->
+<h3 id="mentions">Mentions</h3>
+<p><em>TODO</em></p>
+<h3 id="urls">URLs</h3>
+<p><em>TODO</em></p>
+<h2 id="authentication-levels">Authentication Levels</h2>
+<p>The following is a list of the currently known authentication levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>An unprivileged member of the server</td>
+</tr>
+<tr>
+<td><code>50</code></td>
+<td>Server moderator</td>
+</tr>
+<tr>
+<td><code>100</code></td>
+<td>The owner of the server</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permissions">Permissions</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th><code>!ban</code></th>
+<th><code>!ipban</code></th>
+<th><code>!mod</code></th>
+<th><code>!rm</code></th>
+<th><code>!unban</code></th>
+<th><code>!unmod</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>50</code></td>
+<td><em>Unknown</em></td>
+<td><em>Unknown</em></td>
+<td><em>Unknown</em></td>
+<td>Yes</td>
+<td><em>Unknown</em></td>
+<td><em>Unknown</em></td>
+</tr>
+<tr>
+<td><code>100</code></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2023 The ChatKC Team
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.expand", "navigation.sections", "navigation.path", "navigation.footer", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
