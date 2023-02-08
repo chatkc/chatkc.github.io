@@ -7,8 +7,9 @@ repo_name: ChatKC Docs
 
 nav:
     - Home: index.md
-    - Protocol: protocol/protocol.md
-    - Clients: clients/clients.md
+    - Protocol: protocol.md
+    - Clients: clients.md
+    - Bridges: bridges.md
 
 theme:
   logo: images/chatkccircle.png
