@@ -11,6 +11,9 @@ nav:
     - Clients: clients.md
     - Bridges: bridges.md
 
+markdown_extensions:
+  - footnotes
+
 theme:
   logo: images/chatkccircle.png
   favicon: images/chatkcsquarelowres.png
