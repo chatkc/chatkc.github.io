@@ -9,14 +9,14 @@ To join the server, visit Matt's chat [here](https://stream.mattkc.com/chat/) an
 
 * Closed Source
 
-<!--- ## ircKC
+## ircKC
 
 Node.js based IRC (**I**nternet **R**elay **C**hat) developed by [janLuna#3621](https://github.com/janLuna) [^2]
 
 * Open Source
 * [Source Code](https://github.com/janLuna/IRCkc)
 *
---->
+
 
 [^1]: Platapai's Discord ID: ```1030414034484342844```
-<!--- [^2] janLuna's Discord ID: ```849010835225444382``` --->
+[^2] janLuna's Discord ID: ```849010835225444382```
